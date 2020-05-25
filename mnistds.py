@@ -19,7 +19,4 @@ model.compile(optimizer='adam',loss='categorical_crossentropy',metrics=['accurac
 hist=model.fit(X_train,y_train_one_hot,validation_data=(X_test,y_test_one_hot),epochs=3)
 predictions = model.predict(X_test[:10])
 print(np.argmax(predictions,axis=1))
-score=model.score(X_test,y_test_one_hot)
-print(score)
-c_matrix=confusion_matrix(y_test_one_hot,predictions)
-print(c_matrix)
+print(y_test[:10])
